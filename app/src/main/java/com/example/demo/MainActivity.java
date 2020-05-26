@@ -16,5 +16,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        initView();
+        initData();
+        initListener();
+    }
+
+    private void initData() {
+
+    }
+
+    private void initView() {
+        mTv1 = (TextView) findViewById(R.id.tv1);
+        mBtn1 = (Button) findViewById(R.id.btn1);
+
+
+    }
+
+    private void initListener() {
+        mBtn1.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.btn1:
+                mTv1.setText("点击");
+                Toast.makeText(getApplicationContext(),"",Toast.LENGTH_SHORT).show();
+                break;
+        }
     }
 }
