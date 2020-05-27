@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.btn1:
                 mTv1.setText("点击");
-                Toast.makeText(getApplicationContext(),"",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),"点击事件",Toast.LENGTH_SHORT).show();
                 break;
         }
     }
